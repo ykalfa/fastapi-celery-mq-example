@@ -5,10 +5,9 @@ from worker import send
 
 # This is the producer / client
 
-# Create the FastAPI app
 app = FastAPI()
 
-# Use pydantic to keep track of the input request payload
+# pydantic schema
 class SendMessage(BaseModel):
     msg: str
 

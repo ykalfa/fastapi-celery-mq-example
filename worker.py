@@ -2,8 +2,8 @@ from celery import Celery
 from celery.utils.log import get_task_logger
 import time
 
-CELERY_BROKER_URL = 'pyamqp://guest:guest@localhost:5672'
-# CELERY_BROKER_URL = 'pyamqp://guest@rabbit//'
+CELERY_BROKER_URL = 'pyamqp://guest@rabbit//'
+# CELERY_BROKER_URL = 'pyamqp://guest:guest@localhost:5672'
 
 # Create the celery app and get the logger
 celery_app = Celery('tasks', broker=CELERY_BROKER_URL)
